@@ -17,12 +17,14 @@ public class TicTacToe implements ActionListener {// This to create the interfac
 	//Create a constructor
 	TicTacToe(){
 		
+		//Create the frame 
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setSize(800,800);
 		frame.getContentPane().setBackground(new Color(50,50,50));
 		frame.setLayout(new BorderLayout());
 		frame.setVisible(true);
 		
+		//Create the text field  
 		textfield.setBackground(new Color(25,25,25));
 		textfield.setForeground(new Color(25,255,0));
 		textfield.setFont(new Font("Ink Free",Font.BOLD,75));
@@ -30,7 +32,7 @@ public class TicTacToe implements ActionListener {// This to create the interfac
 		textfield.setText("Tic-Tac-Toe");
 		textfield.setOpaque(true);
 		
-		//Create a title panel 
+		//Create a title panel for the Board Layout
 		title_panel.setLayout(new BorderLayout());
 		title_panel.setBounds(0,0,800,100);
 		//create 3 x 3 grid total 9 buttons
@@ -85,7 +87,7 @@ public class TicTacToe implements ActionListener {// This to create the interfac
 		try{
 			Thread.sleep(2000);//delays title then changes to first turn x/o
 		} catch (InterruptedException e) {
-			//TOdo Auto-generated catch block
+			//T0do Auto-generated catch block
 			e.printStackTrace();
 		
 		}
@@ -160,63 +162,63 @@ public class TicTacToe implements ActionListener {// This to create the interfac
 		//check 0 win conditions
 		}
 		if(
-				(buttons[0].getText()=="O")&& 
-				(buttons[1].getText()=="O")&&
-				(buttons[2].getText()=="O")
+				(buttons[0].getText()=="0")&& 
+				(buttons[1].getText()=="0")&&
+				(buttons[2].getText()=="0")
 				){
 			oWins(0,1,2);
 		}
 		if(
-				(buttons[3].getText()=="O")&& 
-				(buttons[4].getText()=="O")&&
-				(buttons[5].getText()=="O")
+				(buttons[3].getText()=="0")&& 
+				(buttons[4].getText()=="0")&&
+				(buttons[5].getText()=="0")
 				 ){
 			oWins(3,4,5);
 		}
 		if(
-				(buttons[6].getText()=="O")&& 
-				(buttons[7].getText()=="O")&&
-				(buttons[8].getText()=="O")
+				(buttons[6].getText()=="0")&& 
+				(buttons[7].getText()=="0")&&
+				(buttons[8].getText()=="0")
 				 ){
 			oWins(6,7,8);
 		}
 		if(
-				(buttons[0].getText()=="O")&& 
-				(buttons[3].getText()=="O")&&
-				(buttons[6].getText()=="O")
+				(buttons[0].getText()=="0")&& 
+				(buttons[3].getText()=="0")&&
+				(buttons[6].getText()=="0")
 				 ){
 			oWins(0,3,6);
 		}
 		if(
-				(buttons[1].getText()=="O")&& 
-				(buttons[4].getText()=="O")&&
-				(buttons[7].getText()=="O")
+				(buttons[1].getText()=="0")&& 
+				(buttons[4].getText()=="0")&&
+				(buttons[7].getText()=="0")
 				 ){
 			oWins(1,4,7);
 		}
 		if(
-				(buttons[2].getText()=="O")&& 
-				(buttons[5].getText()=="O")&&
-				(buttons[8].getText()=="O")
+				(buttons[2].getText()=="0")&& 
+				(buttons[5].getText()=="0")&&
+				(buttons[8].getText()=="0")
 				 ){
 			oWins(2,5,8);
 		}
 		if(
-				(buttons[0].getText()=="O")&& 
-				(buttons[4].getText()=="O")&&
-				(buttons[8].getText()=="O")
+				(buttons[0].getText()=="0")&& 
+				(buttons[4].getText()=="0")&&
+				(buttons[8].getText()=="0")
 				 ){
 			
 			oWins(0,4,8);
 		}
 		if(
-				(buttons[2].getText()=="O")&& 
-				(buttons[4].getText()=="O")&&
-				(buttons[6].getText()=="O")
+				(buttons[2].getText()=="0")&& 
+				(buttons[4].getText()=="0")&&
+				(buttons[6].getText()=="0")
 				 ){
 			oWins(2,4,6);
 		}
-	}//Winning color GREEN used
+	}//Winning color GREEN used to announce winner
 	
 	public void xWins(int a, int b, int c) {
 		buttons[a].setBackground(Color.GREEN);
@@ -236,6 +238,6 @@ public class TicTacToe implements ActionListener {// This to create the interfac
 		for(int i=0;i<9;i++) {
 			buttons[i].setEnabled(false);		
 		}
-		textfield.setText("O wins");
+		textfield.setText("0 wins");
 	}
 }
